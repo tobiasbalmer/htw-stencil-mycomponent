@@ -1,4 +1,4 @@
-import { Component, Prop } from '@stencil/core';
+import { Component, Prop, h } from '@stencil/core';
 
 @Component({
   tag: 'my-component',
@@ -10,6 +10,10 @@ export class MyComponent {
   @Prop() first;
   @Prop() middle;
   @Prop() last;
+
+  connectedCallback() {
+    console.log('connected callback');
+  }
 
   componentWillLoad() {
     console.log('compontent will load');
